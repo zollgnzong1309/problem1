@@ -50,9 +50,9 @@ history = model.fit(
 )
 loss, acc = model.evaluate(X_test, y_test)
 print(f"Model accuracy on the test set: {acc * 100:.2f}%")
-sample = np.array([X_test[0]])  # chọn 1 mẫu bất kỳ
+sample = np.array([X_test[0]]) 
 pred = model.predict(sample)
 pred_label = le.inverse_transform([np.argmax(pred)])
-print("Dự đoán:", pred_label[0])
+print("Prediction:", pred_label[0])
 # Save the model
 model.save('hand_model.h5')
