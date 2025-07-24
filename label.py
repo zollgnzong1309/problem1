@@ -37,13 +37,13 @@ for frame_str, hands in data.items():
     elif 761 <= frame <= 838:
         label = "like"
     else:
-        continue  # ngoài vùng
+        continue  
 
     X.append(coords)
     y.append(label)
 
-    labeled_data[frame_str] = {  # <-- Move this inside the loop
-        "landmarks": [hands[0]],  # Save as list of dicts, not flat list
+    labeled_data[frame_str] = { 
+        "landmarks": [hands[0]],  
         "label": label
     }
 
